@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}List Users{% endblock %}
+
+{% block content %}
+<div class="container-fluid my-3">
+    <div class="container shadow-lg rounded-3 p-3 overflow-scroll">
+        <h2 class="border-5 text-center"><i class="fa-solid fa-users-viewfinder fa-4x primary-color"></i></h2>
+        <table class="table table-sm table-bordered border-primary table-hover">
+            <thead>
+                <tr>
+                    <th style="background-color: darkblue; color: #fff;">ID</th>
+                    <th style="background-color: darkblue; color: #fff;">First Name</th>
+                    <th style="background-color: darkblue; color: #fff;">Last Name</th>
+                    <th style="background-color: darkblue; color: #fff;">Email</th>
+                    <th style="background-color: darkblue; color: #fff;">Created At</th>
+                    <th style="background-color: darkblue; color: #fff;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>{{ user[3] }}</td>
+                    <td>{{ user[4] }}</td>
+                    <td>
+                        <div class="d-flex gap-2 align-items-center">
+                            <a href="/update/{{ user[0] }}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <button class="btn btn-remove btn-danger btn-sm" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-remove-id="{{ user[0] }}"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

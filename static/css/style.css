@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Koh+Santepheap:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taprom&display=swap');
+body{
+    font-family: "Poppins","Koh Santepheap",serif;
+}
+
+h1,h2,h3,h4,h5, .navbar-brand{
+    font-family: Dangrek, sans-serif;
+}
+h2{
+    font-size: 1.2rem;
+}
+footer .fa-brands{
+    font-size: 2rem;
+    opacity: .68;
+    transition: all 0.2s;
+}
+footer .fa-brands:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.fa-youtube{
+    color: red;
+}
+.fa-github{
+    color: black;
+}
+.fa-telegram{
+    color: rgb(18, 163, 224);
+}
+.fa-tiktok{
+    color: darkblue;
+}
+
+
+
+.primary-color{
+    color: darkblue !important;
+}
+
+
+/* .btn,.btn-primay{
+    background-color: darkblue;
+    color: white;
+    border: none;
+} */
+
+
+ul li .text-footer{
+    color: darkblue !important;
+    opacity: .68;
+}
+ul li .text-footer:hover{
+    color: rgb(3, 3, 133) !important;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.discription-footer{
+    opacity: .68;
+}
+.discription-footer:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.navbar-collapse {
+    flex-grow: unset; /* Prevents the nav links from stretching */
+  }
+  
+  .navbar-nav {
+    gap: 15px; /* Adds spacing between navigation links */
+  }
+
+  /* Custom CSS for the search button on mobile screens */
+
+
+
+#loading-spinner {
+    z-index: 1050; /* Ensure it overlays all content */
+  }
+  .card-users {
+    transition: all 0.5s;
+    opacity: 0.7;
+}
+
+.card-users:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.card-users:hover ~ .card-users {
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+
+/* nav Icon */
+.nav-icon{
+    color: rgba(0, 0, 139, 0.934);
+    font-size: 2rem;
+}
+.nav-icon:hover{
+    color: rgb(0, 0, 184);
+}

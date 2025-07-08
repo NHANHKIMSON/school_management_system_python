@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Home | Page {% endblock %}
+
+
+{% block content %}
+
+<div class="my-3">
+    <div class="container d-flex justify-content-center align-items-center flex-wrap gap-3">
+        {% for user in users %}
+        <div class="card-users overflow-hidden">
+            <div class="d-flex justify-content-center align-items-center flex-column rounded" style="width: 250px;">
+                <img class="img-fluid rounded-top-3" src="/static/img/Male.png" alt="Male">
+                <div class="container-fluid shadow-lg p-3 rounded-3">
+                    <div class="content">
+                        <h2>Name: {{ user[1] }} {{ user[2] }}</h2>
+                        <small>Email: {{ user[3] }}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
