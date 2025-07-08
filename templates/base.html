@@ -37,10 +37,10 @@
                 <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('create') }}">Create</a>
+                <a class="nav-link" href="{{ url_for('students.create') }}">Create</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('listUser') }}">List Users</a>
+                <a class="nav-link" href="{{ url_for('students.list_user') }}">List Users</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -86,8 +86,9 @@
             <h2 class="text-center primary-color">Quick Links</h2>
             <ul>
               <li class="list-unstyled"><a class="text-decoration-none text-footer" href="/">Home</a></li>
-              <li class="list-unstyled"><a class="text-decoration-none text-footer" href="{{ url_for('create') }}">Create</a></li>
-              <li class="list-unstyled"><a class="text-decoration-none text-footer" href="{{ url_for('listUser') }}">List Users</a></li>
+              <li class="list-unstyled"><a class="text-decoration-none text-footer" href="{{ url_for('students.create') }}">Create</a></li>
+              <li class="list-unstyled"><a class="text-decoration-none text-footer" href="{{ url_for('students.list_user') }}">List Students</a></li>
+              <li class="list-unstyled"><a class="text-decoration-none text-footer" href="{{ url_for('students.list_user') }}">List Teachers</a></li>
             </ul>
           </div>
           <div class="col-12 col-md-3">
@@ -163,7 +164,7 @@
       
       </div>
       <div class="modal-footer">
-        <form action="{{ url_for("remove_user") }}" method="post">
+        <form action="{{ url_for("students.remove_user") }}" method="post">
           <div class="d-flex gap-2">
             <input type="hidden" id="remove-id" name="remove-id">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>

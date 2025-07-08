@@ -18,13 +18,13 @@
                 </tr>
             </thead>
             <tbody>
-                {% for user in users %}
+                {% for user in students %}
                 <tr>
                     <td>{{ user[0] }}</td>
                     <td>{{ user[1] }}</td>
                     <td>{{ user[2] }}</td>
                     <td>{{ user[3] }}</td>
-                    <td>{{ user[4] }}</td>
+                    <td>{{ user[7] }}</td>
                     <td>
                         <div class="d-flex gap-2 align-items-center">
                             <a href="/update/{{ user[0] }}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
